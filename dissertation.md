@@ -96,7 +96,9 @@ In order to try and work around this, LSTM networks would be explored as a poten
 
 ## Network Architecture
 
+Apart from WaveNet, guidance for creating a network architecture suitable for capturing the complexities of audio data were hard to come by. Most of the experience I had with machine learning was limited to completing example problems and tutorials. 
 
+As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data which the tutorial used.
 
 ## Evaluating Success
 

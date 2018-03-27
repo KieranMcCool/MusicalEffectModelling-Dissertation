@@ -126,9 +126,15 @@ Spectograms are a graphical representation of an audio signal. They show detaile
 The process for creating Melspectograms is based on mapping the signal to Mel Scale using the Fourier Transform. This can then be represented as a heatmap of frequencies in Hz which are present in the audio. Figure @fig:spectogram
 shows an example of this on an audio track.
 
+This is a vital tool in determining how effectively frequency based effects are being modelled as it shows any changes to the EQ of the track.
+
 ![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=8in height=2.6in}
 
 ### Impulse Response
+
+Impulse responses are used to represent distinct audible events. They can be visualised by simple graphing the amplitudes over time of a sample. This generates a line showing the intensity of the signal over a given time preiod.
+
+Impulse responses can be useful in identifying the perceived volume or gain applied to a signal, making it a vital tool in determining how well the network is modelling distortion and other amplitude based effects.
 
 ### ABX Testing
 

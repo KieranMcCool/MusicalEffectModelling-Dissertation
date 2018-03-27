@@ -120,15 +120,13 @@ Another idea was to implement the same basic network as WaveNet. Using dilated c
 ## Evaluating Success
 
 
-### MelSpectograms
+### Melspectograms
+
+Spectograms are a graphical representation of an audio signal. They show detailed information about the frequencies present in a signal over time.
 
 ### Impulse Response
 
-testing
-
-### ABX Testing
-
-testing
+### ABX Testing
 
 # Implementation
 

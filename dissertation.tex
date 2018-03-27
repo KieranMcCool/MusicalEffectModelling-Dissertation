@@ -250,12 +250,18 @@ effect such as reverb or chorus. Some kind of recursive neural network
 would take the samples from the track in one at a time and learn what
 properties to remember and for how long.
 
-The downside to this was that training time would be much slower as the
+The downside to this was that training time is much slower as the
 network has a great deal more properties to learn than a typical
 feed-forward network.
 
 \hypertarget{wavenet-1}{%
 \subsection{WaveNet}\label{wavenet-1}}
+
+Another idea was to implement the same basic network as WaveNet. Using
+dilated casual convolutions to classify the predicted value based on a
+one-hot encoded vector. This worked extremely well for generating speech
+data, exhibiting a ``subjective naturalness never before seen.''
+\large{reference this}
 
 \hypertarget{evaluating-success}{%
 \section{Evaluating Success}\label{evaluating-success}}

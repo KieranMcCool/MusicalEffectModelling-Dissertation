@@ -149,6 +149,19 @@ For our project to be considered successful, the results would show extreme bias
 
 # Implementation
 
+## Generating Test Data
+
+### Random Audio Signals
+
+### Applying VSTs to Tracks
+
+### Supplementing Dataset with real Music
+
+## Deep Learning Framework
+
+## Visualisation
+
+
 - PyTorch
 - SciPy.signal
 * LibRosa

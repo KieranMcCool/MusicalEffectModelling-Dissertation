@@ -2,8 +2,9 @@ all:
 	(cat preamble.tex && \
 		pandoc -t latex \
 		--variable=documentclass=report \
-		--bibliography dissertation.bib --filter pandoc-citeproc \
-		--pdf-engine=xelatex \
+		--bibliography dissertation.bib \
+		--filter pandoc-fignos \
+		--filter pandoc-citeproc \
 		dissertation.md && \
 		echo "\\end{document}") > dissertation.tex
 	pdflatex dissertation

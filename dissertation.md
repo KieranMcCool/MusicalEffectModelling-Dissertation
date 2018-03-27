@@ -114,14 +114,16 @@ The downside to this was that training time is much slower as the network has a 
 
 ### WaveNet 
 
-Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen." 
+Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen."
 
 ## Evaluating Success
 
 
 ### Melspectograms
 
-Spectograms are a graphical representation of an audio signal. They show detailed information about the frequencies present in a signal over time.
+Spectograms are a graphical representation of an audio signal. They show detailed information about the frequencies present in a signal over time. The resulting representation is often used in speech recognition problems as a means of feature extraction. Allowing the system to identify the words spoken.  As such, they can be used as a quantitative means of evaluating how closely the network output matches the VST output.
+
+
 
 ### Impulse Response
 

@@ -108,7 +108,9 @@ This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReL
 
 ### Long-Short Term Networks
 
-It was thought that while a convolutional network would be impractical in learning the spatial element 
+It was thought that while a convolutional network would be impractical in learning the spatial elements required to reproduce a time-based effect such as reverb or chorus. Some kind of recursive neural network (RNN) was hypothesised to be able to replicate this behaviour as it would take the samples from the track in one at a time and learn what properties to remember and for how long. 
+
+The downside to this was that training time would be much slower as the network has a great deal more properties to learn than a typical feed-forward network.
 
 ### WaveNet 
 

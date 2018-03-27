@@ -128,7 +128,7 @@ shows an example of this on an audio track.
 
 This is a vital tool in determining how effectively frequency based effects are being modelled as it shows any changes to the EQ of the track.
 
-![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=4in}
+![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=4in height=1.6}
 
 ### Impulse Response
 
@@ -138,7 +138,7 @@ Impulse responses can be useful in identifying the perceived volume or gain appl
 
 Figure @fig:impulse shows an example of an impulse response graph.
 
-![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=4in}
+![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=4in height=1.6}
 
 ### ABX Testing
 

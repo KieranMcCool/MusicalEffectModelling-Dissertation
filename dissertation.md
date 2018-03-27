@@ -84,14 +84,13 @@ Narrowing the scope of the project to include only these effects results in a go
 
 ## Deep Learning 
 
+Deep learning has demonstrated extreme potential in the realm of text-to-speech and audio generation. As such, it is possible that it would prove similarly effective in effect modelling.
 
-* Growing use of machine learning across all manner of disciplines
-    - Image recognition, speech synthesis, text-to-speech.
-    - Why not audio signals?
-* Project aims to investigate the viability and explore the limitations of machine learning as a method for modelling effects.
-    - Success would involve being able to convincingly reproduce the characteristics of a given effect after being trained on a clean input and the processed signal.
-    - If the network can run over unseen data and produce the effect reliably.
-    - Different measures of effectiveness, but more on this in evaluation. Perhaps introduce here though.
+A few different types of deep learning were of particular interest. With regards to amplitude based effects, most of the transformation is carried out across a narrow time-frame, and non-linearity is limited. As such, for these effects it was hypothesised that a simple Convolutional Net with a window of narrow window of samples as the input would be sufficient. The same was thought for the frequency based effects such as filters.
+
+For Time Based effects however, the active window of the effect can be much larger, with reverb sometimes being used with multiple second long tail. Given that music is generally sampled at 44,100Hz, this means that for the network to model this, it would require more than 44,100 samples as its input vector. This is obviously impractical as the memory requirements and time to train the network would be impractical.
+
+In order to try and work around this, LSTM networks would be explored as a potential remedy. These would be able to learn which aspects of the track need to be remembered to best replicate the effect.
 
 
 **Sections below are unfinished**

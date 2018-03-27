@@ -126,7 +126,7 @@ Spectograms are a graphical representation of an audio signal. They show detaile
 The process for creating Melspectograms is based on mapping the signal to Mel Scale using the Fourier Transform. This can then be represented as a heatmap of frequencies in Hz which are present in the audio. Figure @fig:spectogram
 shows an example of this on an audio track.
 
-![A Melspectogram of a guitar recording](images/spect.png){width=4in}
+![A Melspectogram of a guitar recording](images/spect.png){width=4in keepaspectratio}
 
 ### Impulse Response
 

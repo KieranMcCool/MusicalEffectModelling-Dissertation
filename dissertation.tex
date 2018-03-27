@@ -15,6 +15,43 @@
 \maketitle
 
 \tableofcontents
+% pandoc-xnos: macro to create a caption without a prefix
+\makeatletter
+\long\def\@makenoprefixcaption#1#2{
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{#2}
+  \ifdim \wd\@tempboxa >\hsize
+    #2\par
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
+% pandoc-fignos: save original macros
+\makeatletter
+\let\@oldmakecaption=\@makecaption
+\let\oldthefigure=\thefigure
+\let\oldtheHfigure=\theHfigure
+\makeatother
+
+% pandoc-fignos: environment disables figure caption prefixes
+\makeatletter
+\newcounter{figno}
+\newenvironment{no-prefix-figure-caption}{
+  \let\@makecaption=\@makenoprefixcaption
+  \renewcommand\thefigure{x.\thefigno}
+  \renewcommand\theHfigure{x.\thefigno}
+  \stepcounter{figno}
+}{
+  \let\thefigure=\oldthefigure
+  \let\theHfigure=\oldtheHfigure
+  \let\@makecaption=\@oldmakecaption
+  \addtocounter{figure}{-1}
+}
+\makeatother
+
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
@@ -275,6 +312,21 @@ problems as a means of feature extraction. Allowing the system to
 identify the words spoken. As such, they can be used as a quantitative
 means of evaluating how closely the network output matches the VST
 output.
+
+The process for creating Melspectograms is based on mapping the signal
+to Mel Scale using the Fourier Transform. This can then be represented
+as a heatmap of frequencies in Hz which are present in the audio. Figure
+({\textbf{???}}) shows an example of this on an audio track.
+
+\begin{no-prefix-figure-caption}
+
+\begin{figure}
+\centering
+\includegraphics{images/spect.png}
+\caption{A Melspectogram of a guitar recording}
+\end{figure}
+
+\end{no-prefix-figure-caption}
 
 \hypertarget{impulse-response}{%
 \subsection{Impulse Response}\label{impulse-response}}

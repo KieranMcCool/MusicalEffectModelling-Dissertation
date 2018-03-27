@@ -123,7 +123,10 @@ Another idea was to implement the same basic network as WaveNet. Using dilated c
 
 Spectograms are a graphical representation of an audio signal. They show detailed information about the frequencies present in a signal over time. The resulting representation is often used in speech recognition problems as a means of feature extraction. Allowing the system to identify the words spoken.  As such, they can be used as a quantitative means of evaluating how closely the network output matches the VST output.
 
+The process for creating Melspectograms is based on mapping the signal to Mel Scale using the Fourier Transform. This can then be represented as a heatmap of frequencies in Hz which are present in the audio. Figure @fig:spectogram
+shows an example of this on an audio track.
 
+![A Melspectogram of a guitar recording](images/spect.png)
 
 ### Impulse Response
 

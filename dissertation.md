@@ -137,12 +137,15 @@ Impulse responses can be useful in identifying the perceived volume or gain appl
 
 Figure @fig:impulse shows an example of an impulse response graph.
 
+### ABX Testing
+
+ABX testing takes the form of having 3 tracks, A which is our clean signal, B which is our processed effect, and X which is the output of the network. The listener is not informed which track is which and has to say whether X sounds more like A or B. 
+
+For our project to be considered successful, the results would show extreme bias in X sounding more like B than A. As this means that the network is producing tracks which sound more like the processed effect than the clean input.
+
 ![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=6in height=2.4in}
 
 ![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=6in height=2.4in}
-
-### ABX Testing
-
 # Implementation
 
 - PyTorch

@@ -80,6 +80,8 @@ While there is a huge range of commonly used effects, and an even larger range o
 \end{tabular}
 \end{center}
 
+Narrowing the scope of the project to include only these effects results in a good indication of viability across a multitude of effects, while keeping the project scope at an attainable level.
+
 ## Deep Learning 
 
 

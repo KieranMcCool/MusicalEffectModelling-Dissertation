@@ -231,3 +231,6 @@ TSWLatexianTemp*
 
 # Mac Stuff
 .DS_Store
+
+# Vim Stuff
+*.swp

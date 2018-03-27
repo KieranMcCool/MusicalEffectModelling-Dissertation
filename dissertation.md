@@ -117,9 +117,14 @@ The downside to this was that training time is much slower as the network has a 
 Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen." 
 \LARGE{reference this}
 
-
-
 ## Evaluating Success
+
+## MelSpectograms
+
+## Impulse Response
+
+## ABX Testing
+
 
 # Implementation
 

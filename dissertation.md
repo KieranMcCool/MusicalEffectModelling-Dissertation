@@ -96,9 +96,19 @@ In order to try and work around this, LSTM networks would be explored as a poten
 
 ## Network Architecture
 
+### Convolutional Networks
+
 Apart from WaveNet, guidance for creating a network architecture suitable for capturing the complexities of audio data were hard to come by. Most of the experience I had with machine learning was limited to completing example problems and tutorials. 
 
-As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data which the tutorial used.
+As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data which the tutorial used. The network I chose to adapt was one which performed well on the MNIST image classification dataset.
+
+This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReLU) activation layers between, the results of which were then forwarded into a Max Pooling layer before a series of fully connected layers.
+
+
+### Long-Short Term Networks
+
+
+### WaveNet 
 
 ## Evaluating Success
 

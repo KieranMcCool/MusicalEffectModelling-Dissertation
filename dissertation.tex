@@ -215,6 +215,9 @@ track need to be remembered to best replicate the effect.
 \hypertarget{network-architecture}{%
 \section{Network Architecture}\label{network-architecture}}
 
+\hypertarget{convolutional-networks}{%
+\subsection{Convolutional Networks}\label{convolutional-networks}}
+
 Apart from WaveNet, guidance for creating a network architecture
 suitable for capturing the complexities of audio data were hard to come
 by. Most of the experience I had with machine learning was limited to
@@ -222,7 +225,19 @@ completing example problems and tutorials.
 
 As such, the first goal was to adapt one of these example networks to
 receive audio data rather than text or image data which the tutorial
-used.
+used. The network I chose to adapt was one which performed well on the
+MNIST image classification dataset.
+
+This network consisted of 2 Convolutional Layers with Rectified Linear
+Unit (ReLU) activation layers between, the results of which were then
+forwarded into a Max Pooling layer before a series of fully connected
+layers.
+
+\hypertarget{long-short-term-networks}{%
+\subsection{Long-Short Term Networks}\label{long-short-term-networks}}
+
+\hypertarget{wavenet-1}{%
+\subsection{WaveNet}\label{wavenet-1}}
 
 \hypertarget{evaluating-success}{%
 \section{Evaluating Success}\label{evaluating-success}}

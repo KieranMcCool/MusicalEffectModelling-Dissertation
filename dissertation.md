@@ -92,13 +92,13 @@ For Time Based effects however, the active window of the effect can be much larg
 
 In order to try and work around this, LSTM networks would be explored as a potential remedy. These would be able to learn which aspects of the track need to be remembered to best replicate the effect.
 
-
-**Sections below are unfinished**
-
 # Methods
 
-- Network Architecture
-- Evaluating outputs, Mel Spectogram etc
+## Network Architecture
+
+
+
+## Evaluating Success
 
 # Implementation
 

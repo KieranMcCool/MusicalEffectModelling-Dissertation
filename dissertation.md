@@ -102,7 +102,7 @@ Apart from WaveNet, guidance for creating a network architecture suitable for ca
 
 As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data which the tutorial used. The network I chose to adapt was one which performed well on the MNIST image classification dataset.
 
-This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReLU) activation layers between, the results of which were then forwarded into a Max Pooling layer before a series of fully connected layers. A simplified diagram of this is shown in [@#fig:nn]
+This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReLU) activation layers between, the results of which were then forwarded into a Max Pooling layer before a series of fully connected layers. A simplified diagram of this is shown in Figure @#fig:nn
 
 ![A Simplified Diagram of the Convolutional Network used](images/cnn.png){#fig:nn width=4in}
 

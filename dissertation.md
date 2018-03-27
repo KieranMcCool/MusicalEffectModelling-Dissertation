@@ -119,12 +119,17 @@ Another idea was to implement the same basic network as WaveNet. Using dilated c
 
 ## Evaluating Success
 
+testing
+
 ## MelSpectograms
 
 ## Impulse Response
 
+testing
+
 ## ABX Testing
 
+testing
 
 # Implementation
 

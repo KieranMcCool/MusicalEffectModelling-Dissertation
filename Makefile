@@ -9,6 +9,9 @@ all:
 	pdflatex dissertation
 	biber dissertation
 	pdflatex dissertation
+	git add .
+	git commit -m "updated as of $(date)"
+	git push
 	open dissertation.pdf
 
 clean:

@@ -138,7 +138,7 @@ Impulse responses can be useful in identifying the perceived volume or gain appl
 
 Figure @fig:impulse shows an example of an impulse response graph.
 
-![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=8in height=3.2}
+![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=8in height=3.2in}
 
 ### ABX Testing
 

@@ -10,7 +10,7 @@ all:
 	biber dissertation
 	pdflatex dissertation
 	git add .
-	git commit -m "updated as of $(date)"
+	git commit -m "updated as of $(shell date)"
 	git push
 	open dissertation.pdf
 

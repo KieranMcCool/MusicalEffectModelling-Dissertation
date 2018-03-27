@@ -128,7 +128,6 @@ shows an example of this on an audio track.
 
 This is a vital tool in determining how effectively frequency based effects are being modelled as it shows any changes to the EQ of the track.
 
-![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=6in height=2.4in}
 
 ### Impulse Response
 
@@ -137,6 +136,8 @@ Impulse responses are used to represent distinct audible events. They can be vis
 Impulse responses can be useful in identifying the perceived volume or gain applied to a signal, making it a vital tool in determining how well the network is modelling distortion and other amplitude based effects.
 
 Figure @fig:impulse shows an example of an impulse response graph.
+
+![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=6in height=2.4in}
 
 ![An Impulse Response Graph of 200 samples in a track](images/spect.png){#fig:impulse width=6in height=2.4in}
 

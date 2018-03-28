@@ -2,7 +2,7 @@
 
 ## Musical Effects
 
-Musical effects are transformations which can be applied to an audio track to change the sound in some way [@wenttola2017use]. These can take the form of simple tweaks to the frequency range of the track to applying pitch modulation and beyond. 
+Musical effects are transformations which can be applied to an audio track to change the sound in some way [@wenttola2017use]. These can take the form of simple tweaks to the frequency range  to applying pitch modulation and beyond. 
 
 Musical effects can completely change the way a track sounds and the art of mixing a track is - in many ways - more complicated than the composition and performance of the track. Sound engineers have a huge range of choices and responsibility when it comes to getting the soundscape correct for the final product.
 
@@ -46,7 +46,7 @@ Most of their work however, was limited to interacting with MIDI data rather tha
 
 Another use of deep learning for audio synthesis is in the field of generating realistic text-to-speech. [@van2016wavenet] DeepMind's WaveNet is a generative network, trained using raw audio samples to predict the value of the next sample in the series. [@van2016wavenet] 
 
-The project found that while generally an LSTM is better suited to this kind of time-series problem, they could achieve similar results using stacked convolutional layers applying dilated casual convolutions. [@van2016wavenet] At each layer they would double the dilation amount up to a maximum before starting again at 1. This a increases the receptive field of the network in a similar way to how an LSTM selectively remembers traits while maintaining the ease of training of a convolutional network. 
+The project found that while generally an LSTM is better suited to this kind of time-series problem, they could achieve similar results using stacked convolutional layers. [@van2016wavenet] At each layer they would double the dilation amount up to a maximum before starting again at 1. This a increases the receptive field of the network in a similar way to how an LSTM selectively remembers traits while maintaining the ease of training of a convolutional network. 
 
 Another way in which the WaveNet implementation differs from a standard convolutional network is in its output layer. Instead of predicting a sample as a floating point value representing the amplitude, the output is a one-hot encoded vector where the largest index corresponds with the $\mu$--Law encoded integer of the sample.
 
@@ -65,7 +65,7 @@ This network has proven itself to be capable of generating extremely effective, 
 
 The aim of this project is to explore the viability and success of deep learning in effect modelling at a fairly general level. As such, a multitude of different effects should be tested. 
 
-While there is a huge range of commonly used effects, and an even larger range of different variations of these same effects with subtly different responses, most of them fit in to one of three groups.
+While there is a huge range of commonly used effects, and countless variations of these same effects with subtly different responses, most of them fit in to one of three groups.
 
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
@@ -86,7 +86,7 @@ Narrowing the scope of the project to include only these effects results in a go
 
 Deep learning has demonstrated extreme potential in the realm of text-to-speech and audio generation. As such, it is possible that it would prove similarly effective in effect modelling.
 
-A few different types of deep learning were of particular interest. With regards to amplitude based effects, most of the transformation is carried out across a narrow time-frame, and non-linearity is limited. As such, for these effects it was hypothesised that a simple Convolutional Net with a window of narrow window of samples as the input would be sufficient. The same was thought for the frequency based effects such as filters.
+A few different types of deep learning were of particular interest. With regards to amplitude based effects, most of the transformation is carried out across a narrow time-frame, and non-linearity is limited. As such, for these effects it was hypothesised that a simple Convolutional Net with a window of window of samples as the input. The same was thought for the frequency based effects such as filters.
 
 For Time Based effects however, the active window of the effect can be much larger, with reverb sometimes being used with multiple second long tail. Given that music is generally sampled at 44,100Hz, this means that for the network to model this, it would require more than 44,100 samples as its input vector. This is obviously impractical as the memory requirements and time to train the network would be impractical.
 
@@ -98,9 +98,9 @@ In order to try and work around this, LSTM networks would be explored as a poten
 
 ### Convolutional Networks
 
-Apart from WaveNet, guidance for creating a network architecture suitable for capturing the complexities of audio data were hard to come by. Most of the experience I had with machine learning was limited to completing example problems and tutorials. 
+Apart from WaveNet, guidelines for creating a network architecture suitable for capturing the complexities of audio data were limited. Most of the experience I had with machine learning was in completing example problems and tutorials. 
 
-As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data which the tutorial used. The network I chose to adapt was one which performed well on the MNIST image classification dataset.
+As such, the first goal was to adapt one of these example networks to receive audio data rather than text or image data. The network I chose to adapt was one which performed well on the MNIST image classification dataset.
 
 This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReLU) activation layers between, the results of which were then forwarded into a Max Pooling layer before a series of fully connected layers. A simplified diagram of this is shown in Figure {@fig:nn}
 
@@ -108,7 +108,7 @@ This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReL
 
 ### Long-Short Term Networks
 
-It was thought that while a convolutional network would be impractical in learning the spatial elements required to reproduce a time-based effect such as reverb or chorus. Some kind of recursive neural network (RNN) was hypothesised to be able to replicate this behaviour as it would take the samples from the track in one at a time and learn what properties to remember and for how long [@gers1999learning]. 
+It was thought that while a convolutional network would be impractical in learning the spatial elements required to reproduce a time-based effect such as reverb or chorus. Some kind of recursive neural network (RNN) would be able to replicate this behaviour as it would take the samples from the track in one at a time and learn which properties to remember and for how long [@gers1999learning].
 
 The downside to this was that training time is much slower as the network has a great deal more properties to learn than a typical feed-forward network.[@gers1999learning]
 
@@ -130,16 +130,15 @@ shows an example of this on an audio track.
 
 This is a vital tool in determining how effectively frequency based effects are being modelled as it shows any changes to the EQ of the track. For a model to be considered successful, the spectogram from the model should look more similar to the spectogram of the VST than the clean signal. This demonstrates that the EQ profile of the model output is exhibiting the same changes that the VST made.
 
-
 ### Impulse Response
 
-Impulse responses are used to represent distinct audible events. They can be visualised by simple graphing the amplitudes over time of a sample. This generates a line showing the intensity of the signal over a given time period.
+Impulse responses are used to represent distinct audible events. They can be visualised by simply graphing the samples on a line. This generates a graph showing the intensity of the signal over a given time period.
 
 Impulse responses can be useful in identifying the perceived volume or gain applied to a signal, making it a vital tool in determining how well the network is modelling distortion and other amplitude based effects.
 
 Figure @fig:impulse shows an example of an impulse response graph.
 
-In the interest of ease of comparison, in the results section the impulse response of the clean signal, the VST signal, and the model's effort will be plotted in on the same graph for comparison (as shown in figure @fig:axisshare). This allows the three signals to be compared easily. For the model to be considered successful, its curve should be more similar to that of the VST effect than the Clean signal. This would mean that any changes to amplitude the VST makes, the model is attempting to capture with some degree of success.
+In the interest of ease of comparison, in the results section the impulse response of the clean signal, the VST signal, and the model's effort will be plotted in on the same graph (as shown in figure @fig:axisshare). This allows the three signals to be compared easily. For the model to be considered successful, its curve should be more similar to that of the VST effect than the Clean signal. This would mean that any changes to amplitude the VST makes, the model is attempting to capture with some degree of success.
 
 ### ABX Testing
 
@@ -167,11 +166,11 @@ Numpy was also used to generate sine waves at fixed frequencies from the above r
 
 To further add variety, scipy's `square` and `sawtooth` functions were used with random frequencies to further add to the variety of different sounds that can appear in the resulting audio tracks. 
 
-Beyond this, the generated data is split into 'segments' which was done to replicate the way that music can vary in terms of speed, intensity and general level of complexity. Each segment is 10 seconds long. 
+Beyond this, the generated data is split into 'segments' which replicate the way that music can vary in terms of speed, intensity and general level of complexity. Each segment is 10 seconds long. 
 
 This means that every 10 seconds of audio data generated varies in terms of how many different notes or waveforms are being expressed at a given time, and how big the gaps between notes are. This was introduced to replicate the fact that there is rarely just a signal note playing in a musical piece. This could be important for modelling the time-based effects as it adds a greater variety to the audio which may need to be remembered to successfully model chorus, delay and reverb.
 
-Generating the audio was carried out in a Python script called `generate.py` which two integer arguments, the first determines how many audio tracks are to be generated and the second determines the number of segments per track.
+Generating the audio was carried out in a Python script called `generate.py` which takes two integer arguments, the first determines how many audio tracks are to be generated and the second determines the number of segments per track.
 
 ### Applying VSTs to Tracks
 
@@ -179,11 +178,11 @@ To train the network, we need a clean signal which takes the form of the output 
 
 In order to achieve this, a VST host which could be invoked through the command line was preferred. Initially a command line utility known as MrsWatson was selected for this. It could be invoked with a command such as `mrswatson --input mysong.wav --output out.wav --plugin myplugin` to apply an effect called `myplugin` to `mysong.wav`.
 
-However, MrsWatson proved to behave inconsistently. Using it with Linux required the plugins to have been specifically compiled for Linux and since there are so few audio professionals working on this platform the number of effects available were seriously limited. Beyond this, the quality of the output was poor, often exhibiting hiss or other signal noise being introduced. 
+However, MrsWatson proved to behave inconsistently. Using it with Linux required the plugins to have been specifically compiled for Linux and since there are so few audio professionals working on this platform the, number of effects available were seriously limited. Beyond this, the quality of the output was poor, often exhibiting hiss or other signal noise. 
 
-As such, a new solution was required. This came in the form of Reaper. A fully-featured Digital Audio Workstation. While Reaper has a huge range of features, the feature of interest in this project is its batch mode which can be invoked with the command line [@reaperbm]. This mode allows a list of files to be given in a line-delimited file and a Reaper signal chain file to be given to be applied to each of these files.[@reaperbm]
+As such, a new solution was required. This came in the form of Reaper. A fully-featured Digital Audio Workstation. While Reaper has a huge range of features, the feature of interest in this project is its batch mode which can be invoked with the command line [@reaperbm]. This mode allows a list of files to be given in a line-delimited file and a Reaper signal chain file to be given to and applied to each of these files.[@reaperbm]
 
-A `bash` script was created to automatically generate the files using `generate.py`, the dataset would be saved in a folder called 'dataset' The script would then run Reapers batch mode on the files putting the resulting files in 'dataset/processed' with the same file name as their corresponding source files.
+A `bash` script was created to automatically generate the files using `generate.py`, the dataset would be saved in a folder called 'dataset' The script would then run Reapers batch mode on the files, outputting the resulting files in 'dataset/processed' with the same file name as their corresponding source files.
 
 ### Supplementing Dataset with Real Music
 
@@ -258,7 +257,7 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 
 ### Amplifier + Cab Simulation
 
-Amp Simulation is a historically difficult task. Modelling amplifiers still have a tiny market share and are some of the most criticised applications of software modelling. This is reflected in the fact that the model completely fails to learn the required transformation to mimic amp simulation.
+Amp Simulation is a historically difficult task. [@wenttola2017use] Modelling amplifiers still have a tiny market share and are some of the most criticised applications of software modelling. This is reflected in the fact that the model completely fails to learn the required transformation to mimic amp simulation.
 
 While the spectogram (Figures @fig:ampc, @fig:ampm, and @fig:ampv) seems to confirm that some aspects of the EQ profile are learned, it fails to match as closely as the previous effects. Beyond this, the VST seems to add a lot more gain, as demonstrated in @fig:ampsim. This increased amplitude is expressed as the audio track becoming clipped and distorted in ways that are not musical or intentional.
 

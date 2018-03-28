@@ -258,7 +258,7 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 
 Amp Simulation is a historically difficult task. Modelling amplifiers still have a tiny market share and are some of the most criticised applications of software modelling. This is reflected in the fact that the model completely fails to learn the required transformation to mimic amp simulation.
 
-While the spectogram (Figures @fig:ampsimclean, @fig:ampsimmodel, and @fig:ampsimvst) seems to confirm that some aspects of the EQ profile are learned, it fails to match as closely as the previous effects. Beyond this, the VST seems to add a lot more gain, as demonstrated in @fig:ampsim. This increased amplitude is expressed as the audio track becoming clipped and distorted in ways that are not musical or intentional.
+While the spectogram (Figures @fig:ampc, @fig:ampm, and @fig:ampv) seems to confirm that some aspects of the EQ profile are learned, it fails to match as closely as the previous effects. Beyond this, the VST seems to add a lot more gain, as demonstrated in @fig:ampsim. This increased amplitude is expressed as the audio track becoming clipped and distorted in ways that are not musical or intentional.
 
 This is perhaps due to the fact that there are a lot more behaviours to learn in an amp simulation than there is with a basic distortion effect, in fact amp simulation may even bridge the two categories of Amplitude based effects and Frequency based effects since it operates over both of these domains.
 

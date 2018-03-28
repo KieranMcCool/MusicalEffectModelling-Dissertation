@@ -252,6 +252,7 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distor
 ![Model Spectogram](images/fuzzmodel.png){#fig:distortionsm width=4in}
 
 ![VST Spectogram](images/fuzzvst.png){#fig:distortionsv width=4in}
+
 ### Amplifier + Cab Simulation
 
 

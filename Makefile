@@ -21,3 +21,6 @@ clean:
 	rm dissertation.log
 	rm dissertation.aux
 	rm dissertation.toc
+	rm dissertation.run.xml
+	rm dissertation.bcf
+	rm dissertation.out

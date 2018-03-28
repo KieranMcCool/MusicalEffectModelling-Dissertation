@@ -256,6 +256,17 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 
 ### Amplifier + Cab Simulation
 
+Amp Simulation is a historically difficult task. Modelling amplifiers still have a tiny market share and are some of the most criticised applications of software modelling. This is reflected in the fact that the model completely fails to learn the required transformation to mimic amp simulation.
+
+![Amp Simulation after 30000 iterations over the dataset](images/ampsim.png){#fig:ampsim width=6in height=4.5in}
+
+![Clean Spectogram](images/ampsimclean.png){#fig:ampc width=4in} 
+
+![Model Spectogram](images/ampsimmodel.png){#fig:ampm width=4in}
+
+![VST Spectogram](images/ampsimvst.png){#fig:ampv width=4in}
+
+
 
 ## Frequency Based Effects
 
@@ -282,6 +293,8 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 While the characteristics are modelled with limited success, the tracks generated feature artifacts such has introducing additional hiss or static noise into the signal. This prevents them from being usable as pieces of music and as such makes it difficult to justify the project as anything more than a proof of concept.
 
 ## Frequency Based Effects
+
+##
 
 ## Time Based Effects
 

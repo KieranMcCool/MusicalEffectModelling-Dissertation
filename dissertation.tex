@@ -518,11 +518,11 @@ before a Max Pooling Layer and a Fully Connected section which consists
 of 3 Linear layers.
 
 As demonstrated in the figures \ref{fig:distortionsc},
-\ref{fig:distortionsm}, and ({\textbf{???}}), the distortion unit adds a
-huge amount to the intensity of all frequencies, with a bias toward the
-mid ranges. This behaviour is captured fairly well by the model. Figure
-\ref{fig:distortion} also demonstrates that the amplitude boost is also
-learned by the model.
+\ref{fig:distortionsm}, and \ref{fig:distortionsv}, the distortion unit
+adds a huge amount to the intensity of all frequencies, with a bias
+toward the mid ranges. This behaviour is captured fairly well by the
+model. Figure \ref{fig:distortion} also demonstrates that the amplitude
+boost is also learned by the model.
 
 \begin{figure}
 \centering
@@ -551,29 +551,34 @@ dataset\label{fig:distortion}}
 
 \subsection{Fuzz}\label{fuzz}
 
+Fuzz seems to be modelled with similar success to distortion, which
+makes sense since it belongs to the same family of effects. Figures
+\ref{fig:fuzz}, \ref{fig:fuzzc}, \ref{fig:fuzzm}, and \ref{fig:fuzzv}
+demonstrate that the model is able to capture the characteristics of the
+fuzz effect in terms of both EQ range and amplitude.
+
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in,height=4.50000in]{images/fuzz.png}
-\caption{Fuzz after 30000 iterations over the
-dataset\label{fig:distortion}}
+\caption{Fuzz after 30000 iterations over the dataset\label{fig:fuzz}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=4.00000in]{images/fuzzclean.png}
-\caption{Clean Spectogram\label{fig:distortionsc}}
+\caption{Clean Spectogram\label{fig:fuzzc}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=4.00000in]{images/fuzzmodel.png}
-\caption{Model Spectogram\label{fig:distortionsm}}
+\caption{Model Spectogram\label{fig:fuzzm}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=4.00000in]{images/fuzzvst.png}
-\caption{VST Spectogram\label{fig:distortionsv}}
+\caption{VST Spectogram\label{fig:fuzzv}}
 \end{figure}
 
 \subsection{Amplifier + Cab Simulation}\label{amplifier-cab-simulation}

@@ -232,7 +232,7 @@ For a model to be considered successful, the Spectogram and Impulse responses sh
 
 This model was created using a Convolutional Network consisting of 6 convolutional layers, which have a ReLU activation layer between them, before a Max Pooling Layer and a Fully Connected section which consists of 3 Linear layers.
 
-As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distortions:v, the distortion unit adds a huge amount to the intensity of all frequencies, with a bias toward the mid ranges. This behaviour is captured fairly well by the model. Figure @fig:distortion also demonstrates that the amplitude boost is also learned by the model.
+As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @fig:distortionsv, the distortion unit adds a huge amount to the intensity of all frequencies, with a bias toward the mid ranges. This behaviour is captured fairly well by the model. Figure @fig:distortion also demonstrates that the amplitude boost is also learned by the model.
 
 ![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
@@ -244,14 +244,15 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distor
 
 ### Fuzz
 
+Fuzz seems to be modelled with similar success to distortion, which makes sense since it belongs to the same family of effects. Figures @fig:fuzz, @fig:fuzzc, @fig:fuzzm, and @fig:fuzzv demonstrate that the model is able to capture the characteristics of the fuzz effect in terms of both EQ range and amplitude.
 
-![Fuzz after 30000 iterations over the dataset](images/fuzz.png){#fig:distortion width=6in height=4.5in}
+![Fuzz after 30000 iterations over the dataset](images/fuzz.png){#fig:fuzz width=6in height=4.5in}
 
-![Clean Spectogram](images/fuzzclean.png){#fig:distortionsc width=4in}
+![Clean Spectogram](images/fuzzclean.png){#fig:fuzzc width=4in}
 
-![Model Spectogram](images/fuzzmodel.png){#fig:distortionsm width=4in}
+![Model Spectogram](images/fuzzmodel.png){#fig:fuzzm width=4in}
 
-![VST Spectogram](images/fuzzvst.png){#fig:distortionsv width=4in}
+![VST Spectogram](images/fuzzvst.png){#fig:fuzzv width=4in}
 
 ### Amplifier + Cab Simulation
 

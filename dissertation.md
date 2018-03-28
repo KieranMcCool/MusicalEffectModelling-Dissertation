@@ -292,6 +292,10 @@ Figures @fig:pitchc, @fig:pitchv, and @fig:pitchm seem to confirm that some of t
 ### Chorus
 
 
+### A Note on Delay and Reverb
+
+The results of these effects have been omitted from the paper due to space constraints and the fact that they produced the exact same output as the Chorus effect. This is potentially due to a limitation with the LSTM network in terms of training time and system resources, a network sophisticated enough to model these effects can not be created on my system.
+
 # Conclusion
 
 ## Amplitude Based Effects

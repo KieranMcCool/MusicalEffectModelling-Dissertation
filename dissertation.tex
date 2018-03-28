@@ -345,7 +345,31 @@ with real music.
 \subsection{Random Audio Signals}\label{random-audio-signals}}
 
 The random audio data was generated using the \texttt{scipy.signal}
-module.
+module. The function \texttt{chirp} was used to generate an audio signal
+which rises or falls in pitch from one frequency to another. The
+frequencies are both randomised from the range of 80Hz to 1200Hz as this
+is roughly the frequency range of an electric guitar. The speed at which
+this frequency sweep occurs is also randomised. Frequency sweeping was
+thought to imitate a guitar string being bent or slid from one note to
+another.
+
+Numpy was also used to generate sine waves at fixed frequencies from the
+above range. This would simulate a single sustained note from a guitar
+or other instrument.
+
+To further add variety, scipy's \texttt{square} and \texttt{sawtooth}
+functions were used with random frequencies to further add to the
+variety of different sounds that can appear in the resulting audio
+tracks.
+
+Beyond this, the generated data is split into `segments' which was done
+to replicate the way that music can vary in terms of speed, intensity
+and general level of complexity. Each segment is 10 seconds long. This
+means that every 10 seconds of audio data generated varies in terms of
+how many different notes or waveforms are being expressed at a given
+time, and how big the gaps between notes are. This was introduced to
+replicate the fact that there is rarely just a signal note playing in a
+musical piece.
 
 \hypertarget{applying-vsts-to-tracks}{%
 \subsection{Applying VSTs to Tracks}\label{applying-vsts-to-tracks}}

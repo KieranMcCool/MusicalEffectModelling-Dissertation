@@ -177,7 +177,7 @@ In order to achieve this, a VST host which could be invoked through the command 
 
 However, MrsWatson proved to behave inconsistently. Using it with Linux required the plugins to have been specifically compiled for Linux and since there are so few audio professionals working on this platform the number of effects available were seriously limited. Beyond this, the quality of the output was poor, often exhibiting hiss or other signal noise being introduced. 
 
-As such, a new solution was required. This came in the form of Reaper. A fully-featured Digital Audio Workstation.
+As such, a new solution was required. This came in the form of Reaper. A fully-featured Digital Audio Workstation. 
 
 ### Supplementing Dataset with real Music
 

@@ -36,17 +36,17 @@ Given that Nebula is the best plugin available at this time, for this project to
     
 ## Project Magenta
 
-Project Magenta is a venture by the Google Brain Team, their goal is to explore the use of machine learning in creating art, with a particular interest in music. Most of their research is in audio synthesis with some ventures into genre classification and similar problems.
+Project Magenta is a venture by the Google Brain Team, their goal is to explore the use of machine learning in creating art, with a particular interest in music. Most of their research is in audio synthesis with some ventures into genre classification and similar problems.[@projmagenta]
 
 However, this project does raise some interesting questions about the ability of deep learning to characterise the complexities of music.
 
-Most of their work however, was limited to interacting with MIDI data rather than with raw audio samples, perhaps limiting the complexity of the problem, making it an unfair comparison in terms of complexity to effect modelling.
+Most of their work however, was limited to interacting with MIDI data rather than with raw audio samples, [@projmagenta] perhaps limiting the complexity of the problem, making it an unfair comparison in terms of complexity to effect modelling.
 
 ## WaveNet
 
-Another use of deep learning for audio synthesis is in the field of generating realistic text-to-speech. DeepMind's WaveNet is a generative network, trained using raw audio samples to predict the value of the next sample in the series. 
+Another use of deep learning for audio synthesis is in the field of generating realistic text-to-speech. [@van2016wavenet] DeepMind's WaveNet is a generative network, trained using raw audio samples to predict the value of the next sample in the series. [@van2016wavenet] 
 
-The project found that while generally an LSTM is better suited to this kind of time-series problem, they could achieve similar results using stacked convolutional layers applying dilated casual convolutions. At each layer they would double the dilation amount up to a maximum before starting again at 1. This a increases the receptive field of the network in a similar way to how an LSTM selectively remembers traits while maintaining the ease of training of a convolutional network.
+The project found that while generally an LSTM is better suited to this kind of time-series problem, they could achieve similar results using stacked convolutional layers applying dilated casual convolutions. [@van2016wavenet] At each layer they would double the dilation amount up to a maximum before starting again at 1. This a increases the receptive field of the network in a similar way to how an LSTM selectively remembers traits while maintaining the ease of training of a convolutional network. 
 
 Another way in which the WaveNet implementation differs from a standard convolutional network is in its output layer. Instead of predicting a sample as a floating point value representing the amplitude, the output is a one-hot encoded vector where the largest index corresponds with the $\mu$--Law encoded integer of the sample.
 

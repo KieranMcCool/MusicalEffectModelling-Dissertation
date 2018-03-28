@@ -54,7 +54,7 @@ Another way in which the WaveNet implementation differs from a standard convolut
 
     $F(x) = sgn(x)\frac{ln(1+\mu|x|)}{ln(1+\mu)} -1 <= x <= 1$
 
-    $\mu$ Law as expressed in Cisco, 2006 
+    $\mu$ Law \autocite{ulaw}
 \end{center}
 
 This network has proven itself to be capable of generating extremely effective, almost human sounding text-to-speech and is far easier to train than a standard LSTM-based approach.

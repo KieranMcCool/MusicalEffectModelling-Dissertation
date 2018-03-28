@@ -234,9 +234,11 @@ This model was created using a Convolutional Network consisting of 6 convolution
 
 ![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
-![Clean Spectogram](images/distortion.png){#fig:distortion width=6in height=4.5in}
-![Model Spectogram](images/distmodel.png){#fig:distortion width=6in height=4.5in}
-![VST Spectogram](images/distvstspect.png){#fig:distortion width=6in height=4.5in}
+![Clean Spectogram](images/distclean.png){#fig:distortion width=6in}
+
+![Model Spectogram](images/distmodel.png){#fig:distortion width=6in}
+
+![VST Spectogram](images/distvstspect.png){#fig:distortion width=6in}
 
 ![Distortion Impulse Response after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 

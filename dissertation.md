@@ -271,12 +271,19 @@ This is perhaps due to the fact that there are a lot more behaviours to learn in
 ![VST Spectogram (Amp Sim)](images/ampsimvst.png){#fig:ampv width=4in}
 
 
-
 ## Frequency Based Effects
 
-### Filters
-
 ### Pitch Shifting (Octave Shift)
+
+Pitch shifting is an interesting effect, 
+
+![Octave Pitch Shift after 30000 iterations over the dataset](images/pitch.png){#fig:pitch width=6in height=4.5in}
+
+![Clean Spectogram (Pitch Shift)](images/pitchclean.png){#fig:pitchc width=4in} 
+
+![Model Spectogram (Pitch Shift)](images/pitchmodel.png){#fig:pitchm width=4in}
+
+![VST Spectogram (Pitch Shift)](images/pitchvst.png){#fig:pitchv width=3in}
 
 ## Time Based Effects
 

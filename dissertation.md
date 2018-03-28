@@ -204,7 +204,7 @@ PyTorch has three main modules which were used in this project:
 
 testing
 
-## Audio I/O
+## Audio I/O
 
 The project utilises LibRosa for reading and writing `wav` files. This was chosen as it supports a multitude of different output formats. Early versions of the project were using `SciPy.IO.wavfile` for this but it was limited to 64 bit output files, which was unnecessarily large for audio data and required too much storage space. 
 

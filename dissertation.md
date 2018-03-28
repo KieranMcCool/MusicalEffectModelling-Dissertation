@@ -279,6 +279,8 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 
 ## Amplitude Based Effects
 
+While the characteristics are modelled with limited success, the tracks generated feature artifacts such has introducing additional hiss or static noise into the signal. This prevents them from being usable as pieces of music and as such makes it difficult to justify the project as anything more than a proof of concept.
+
 ## Frequency Based Effects
 
 ## Time Based Effects

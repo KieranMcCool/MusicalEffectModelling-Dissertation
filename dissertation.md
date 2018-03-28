@@ -137,7 +137,7 @@ Impulse responses can be useful in identifying the perceived volume or gain appl
 
 Figure @fig:impulse shows an example of an impulse response graph.
 
-In the interest of ease of comparison, in the results section the impulse response of the clean signal, the VST signal, and the model's effort will be plotted in on the same graph for comparison (as shown in figure @fig:axisshare. This allows the three signals to be compared easily. For the model to be considered successful, its curve should be more similar to that of the VST effect than the Clean signal. This would mean that any changes to amplitude the VST makes, the model is attempting to capture with some degree of success.
+In the interest of ease of comparison, in the results section the impulse response of the clean signal, the VST signal, and the model's effort will be plotted in on the same graph for comparison (as shown in figure @fig:axisshare). This allows the three signals to be compared easily. For the model to be considered successful, its curve should be more similar to that of the VST effect than the Clean signal. This would mean that any changes to amplitude the VST makes, the model is attempting to capture with some degree of success.
 
 ### ABX Testing
 

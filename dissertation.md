@@ -323,7 +323,7 @@ The network is able to learn some of the transformations to the EQ profile of th
 
 ## Time Based Effects
 
-The LSTM Network failed to produce audio which exhibited the qualities of Chorus, Reverb, or Delay.This is perhaps due to the simple fact that with audio being sampled at 44,100 samples per second, and the active window of these effects potentially spanning more than 0.5 seconds, that the network is simply unable to train itself on what to remember.
+The LSTM Network failed to produce audio which exhibited the qualities of Chorus, Reverb, or Delay. This is perhaps due to the simple fact that with audio being sampled at 44,100 samples per second, and the active window of these effects potentially spanning more than 0.5 seconds, that the network is simply unable to train itself on what to remember.
 
 Perhaps the WaveNet solution would have had more success with this
 

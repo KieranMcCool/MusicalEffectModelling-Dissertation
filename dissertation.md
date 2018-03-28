@@ -222,6 +222,28 @@ LibRosa will output the file with the smallest sample depth required to adequate
 
 # Results
 
+## Amplitude Based Effects
+
+### Distortion
+
+### Fuzz
+
+### Amplifier + Cab Simulation
+
+
+## Frequency Based Effects
+
+### Filters
+
+### Pitch Shifting (Octave Shift)
+
+## Time Based Effects
+
+### Reverb
+
+### Chorus
+
+
 - Split into quantitative and qualitative
 - Signal Analysis (Quantitative)
 - Spectogram GIFs (Quantitative)

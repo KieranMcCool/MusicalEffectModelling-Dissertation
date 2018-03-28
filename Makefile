@@ -4,7 +4,7 @@ all:
 		--variable=documentclass=report \
 		--bibliography dissertation.bib \
 		--filter pandoc-fignos \
-		--filter pandoc-citeproc \
+		--biblatex \
 		dissertation.md && \
 		echo "\\end{document}") > dissertation.tex
 	pdflatex dissertation

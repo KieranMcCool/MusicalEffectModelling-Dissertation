@@ -6,7 +6,7 @@ all:
 		--filter pandoc-fignos \
 		--biblatex \
 		dissertation.md && \
-		echo "\\end{document}") > dissertation.tex
+		cat postamble.tex) > dissertation.tex
 	pdflatex dissertation
 	biber dissertation
 	pdflatex dissertation

@@ -283,7 +283,7 @@ Pitch shifting is an interesting effect,
 
 ![Model Spectogram (Pitch Shift)](images/pitchmodel.png){#fig:pitchm width=4in}
 
-![VST Spectogram (Pitch Shift)](images/pitchvst.png){#fig:pitchv width=3in}
+![VST Spectogram (Pitch Shift)](images/pitchvst.png){#fig:pitchv width=4in}
 
 ## Time Based Effects
 

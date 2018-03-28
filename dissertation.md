@@ -10,11 +10,11 @@ The music industry is one of the few domains which is still to fully embrace dig
 
 ## Musical Effect Modelling
 
-The main standard for producing digital effects for use with audio is through the Virtual Studio Technology (VST) protocol. This protocol defines a standardised definition for how a VST host would behave, allowing VST Plugins to be created which manipulate or use the audio track in some way.
+The main standard for producing digital effects for use with audio is through the Virtual Studio Technology (VST) protocol. This protocol defines a standardised definition for how a VST host would behave, allowing VST Plugins to be created which manipulate or use the audio track in some way. [@vst]
 
-The technology itself is fairly flexible and allows everything from audio visualisation tools to CPU intensive transformations to be applied. These effects can also be stacked and ordered easily and intuitively.
+The technology itself is fairly flexible and allows everything from audio visualisation tools to CPU intensive transformations to be applied. These effects can also be stacked and ordered easily and intuitively.[@vst]
 
-Most effects however, are limited to digital signal processing (DSP) based transformations, the likes of which are unable to replicate the non-linearity of many analogue methods. This is cause for concern in the music industry and is the reason many professionals and hobbyists claim that they are inadequate for anything more than practice and experimentation.
+Most effects however, are limited to digital signal processing (DSP) based transformations [@wenttola2017use], the likes of which are unable to replicate the non-linearity of many analogue methods [@eichas2014physical]. This is cause for concern in the music industry and is the reason many professionals and hobbyists claim that they are inadequate for anything more than practice and experimentation.
 
 ## Machine Learning
 
@@ -108,13 +108,13 @@ This network consisted of 2 Convolutional Layers with Rectified Linear Unit (ReL
 
 ### Long-Short Term Networks
 
-It was thought that while a convolutional network would be impractical in learning the spatial elements required to reproduce a time-based effect such as reverb or chorus. Some kind of recursive neural network (RNN) was hypothesised to be able to replicate this behaviour as it would take the samples from the track in one at a time and learn what properties to remember and for how long. 
+It was thought that while a convolutional network would be impractical in learning the spatial elements required to reproduce a time-based effect such as reverb or chorus. Some kind of recursive neural network (RNN) was hypothesised to be able to replicate this behaviour as it would take the samples from the track in one at a time and learn what properties to remember and for how long [@gers1999learning]. 
 
-The downside to this was that training time is much slower as the network has a great deal more properties to learn than a typical feed-forward network.
+The downside to this was that training time is much slower as the network has a great deal more properties to learn than a typical feed-forward network.[@gers1999learning]
 
 ### WaveNet 
 
-Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen."
+Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. [@van2016wavenet] This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen."[@van2016wavenet]
 
 An implementation of WaveNet was used in this project but proved impractical as One-Hot Encoding/Decoding of 24 bit audio is slow due to the linear time of decoding. While this worked fine for 8 bit speech data, such a sample depth proved too low to represent audio of a musical nature with enough accuracy to be considered successful.
 

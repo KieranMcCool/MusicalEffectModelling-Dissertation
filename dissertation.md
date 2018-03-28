@@ -145,7 +145,7 @@ For our project to be considered successful, the results would show extreme bias
 
 ![A Melspectogram of a guitar recording](images/spect.png){#fig:spectogram width=6in height=2.4in}
 
-![An Impulse Response Graph of 200 samples in a track](images/impulse.png){#fig:impulse width=6in height=4.5in}
+![An Impulse Response Graph of 300 samples in a track](images/impulse.png){#fig:impulse width=6in height=4.5in}
 
 # Implementation
 

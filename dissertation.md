@@ -291,6 +291,19 @@ Figures @fig:pitchc, @fig:pitchv, and @fig:pitchm seem to confirm that some of t
 
 ### Chorus
 
+Time based effects were by far the least well performing category in the project. Early tests with the standard convolutional network used a huge sample size of around 5000. This was the largest input into the network that could be achieved with 16GB of RAM. Unfortunately, this failed to characterise the effect.
+
+In order to combat this, an LSTM network was used instead. This took the form of a 7 layer LSTM with a hidden size of 800. A new sampler, the `randomSequentialSampler` was created to train for `X` seconds of audio in order before switching to an entirely new section of the track. This was to combat overfitting that comes from training on a track sequentially. Sampling was completely random for other effects. Random sampling would not have worked on the LSTM as it would have been impossible for the network to learn what to remember if it was in random order.
+
+Despite this, the LSTM failed to characterise the behaviour of the VST and in fact did not produce an audible track at all, even after 2 hours of training. The time to train these networks is slow and even with different numbers of layers and hidden sizes the results were the same.
+
+![Chorus after 30000 iterations over the dataset](images/chorus.png){#fig:chorus width=6in height=4.5in}
+
+![Clean Spectogram (Chorus)](images/chorusclean.png){#fig:chorusc width=4in} 
+
+![Model Spectogram (Chorus)](images/chorusmodel.png){#fig:chorusm width=4in}
+
+![VST Spectogram (Chorus)](images/chorusvst.png){#fig:chorusv width=4in}
 
 ### A Note on Delay and Reverb
 

@@ -675,6 +675,52 @@ dataset\label{fig:pitch}}
 
 \subsection{Chorus}\label{chorus}
 
+Time based effects were by far the least well performing category in the
+project. Early tests with the standard convolutional network used a huge
+sample size of around 5000. This was the largest input into the network
+that could be achieved with 16GB of RAM. Unfortunately, this failed to
+characterise the effect.
+
+In order to combat this, an LSTM network was used instead. This took the
+form of a 7 layer LSTM with a hidden size of 800. A new sampler, the
+\texttt{randomSequentialSampler} was created to train for \texttt{X}
+seconds of audio in order before switching to an entirely new section of
+the track. This was to combat overfitting that comes from training on a
+track sequentially. Sampling was completely random for other effects.
+Random sampling would not have worked on the LSTM as it would have been
+impossible for the network to learn what to remember if it was in random
+order.
+
+Despite this, the LSTM failed to characterise the behaviour of the VST
+and in fact did not produce an audible track at all, even after 2 hours
+of training. The time to train these networks is slow and even with
+different numbers of layers and hidden sizes the results were the same.
+
+\begin{figure}
+\centering
+\includegraphics[width=6.00000in,height=4.50000in]{images/chorus.png}
+\caption{Chorus after 30000 iterations over the
+dataset\label{fig:chorus}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=4.00000in]{images/chorusclean.png}
+\caption{Clean Spectogram (Chorus)\label{fig:chorusc}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=4.00000in]{images/chorusmodel.png}
+\caption{Model Spectogram (Chorus)\label{fig:chorusm}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=4.00000in]{images/chorusvst.png}
+\caption{VST Spectogram (Chorus)\label{fig:chorusv}}
+\end{figure}
+
 \subsection{A Note on Delay and
 Reverb}\label{a-note-on-delay-and-reverb}
 

@@ -245,6 +245,13 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distor
 ### Fuzz
 
 
+![Fuzz after 30000 iterations over the dataset](images/fuzz.png){#fig:distortion width=6in height=4.5in}
+
+![Clean Spectogram](images/fuzzclean.png){#fig:distortionsc width=4in}
+
+![Model Spectogram](images/fuzzmodel.png){#fig:distortionsm width=4in}
+
+![VST Spectogram](images/fuzzvst.png){#fig:distortionsv width=4in}
 ### Amplifier + Cab Simulation
 
 
@@ -259,7 +266,6 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distor
 ### Reverb
 
 ### Chorus
-
 
 - Split into quantitative and qualitative
 - Signal Analysis (Quantitative)

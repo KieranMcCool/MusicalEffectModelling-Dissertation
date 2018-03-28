@@ -764,7 +764,15 @@ with audio being sampled at 44,100 samples per second, and the active
 window of these effects potentially spanning more than 0.5 seconds, that
 the network is simply unable to train itself on what to remember.
 
-Perhaps the WaveNet solution would have had more success with this
+Perhaps the WaveNet solution would have had more success with this,
+however the implementation of it proved impractical for audio data.
+Given that one-hot decoding is in linear time based on the sample depth
+of the audio track. This works fine for speech data which is typically 8
+bit but for musical data, we require a sample depth of 24 or greater to
+express the required complexity. As such, this process of one-hot
+decoding adds an inordinate amount of training time to the point where
+the network failed to train anything meaningful despite being left
+overnight.
 
 \chapter{References}\label{references}
 \end{document}

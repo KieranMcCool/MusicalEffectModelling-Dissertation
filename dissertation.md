@@ -212,7 +212,7 @@ Impulse response graphs are relatively simple to implement from the data we get 
 
 We can better compare the three audio files by plotting them the three of them on the same axis as is shown in @fig:axisshare
 
-![Demonstrates the Clean Signal (Red), the VST Signal (Blue), and the Model Signal (Green)](images/axisshare.png){#fig:axisshare}
+![Demonstrates the Clean Signal (Red), the VST Signal (Blue), and the Model Signal (Green)](images/axisshare.png){#fig:axisshares width=6in height=4.5in}
 
 ## Audio I/O
 

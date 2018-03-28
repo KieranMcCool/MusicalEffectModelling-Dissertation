@@ -232,6 +232,12 @@ For a model to be considered successful, the Spectogram and Impulse responses sh
 
 This model was created using a Convolutional Network consisting of 6 convolutional layers, which have a ReLU activation layer between them, before a Max Pooling Layer and a Fully Connected section which consists of 3 Linear layers.
 
+![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
+
+![Clean Spectogram](images/distortion.png){#fig:distortion width=6in height=4.5in}
+![Model Spectogram](images/distmodel.png){#fig:distortion width=6in height=4.5in}
+![VST Spectogram](images/distvstspect.png){#fig:distortion width=6in height=4.5in}
+
 ![Distortion Impulse Response after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
 ### Fuzz

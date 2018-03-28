@@ -212,7 +212,7 @@ Impulse response graphs are relatively simple to implement from the data we get 
 
 We can better compare the three audio files by plotting them the three of them on the same axis as is shown in figure @fig:axisshare
 
-![Demonstrates the Clean Signal (Red), the VST Signal (Blue), and the Model Signal (Green)](images/axisshare.png){#fig:axisshare width=4.667in height=3.5in}
+![Demonstrates the Clean Signal (Orange), the VST Signal (Green), and the Model Signal (Blue). We can see the model is generating a signal which lies somewhere between the clean signal and the VST, this shows the model is learning the necessary transformation.](images/axisshare.png){#fig:axisshare width=4.667in height=3.5in}
 
 ## Audio I/O
 

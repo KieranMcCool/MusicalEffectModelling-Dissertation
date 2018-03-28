@@ -15,11 +15,9 @@
 \maketitle
 
 \tableofcontents
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\chapter{Introduction}\label{introduction}
 
-\hypertarget{musical-effects}{%
-\section{Musical Effects}\label{musical-effects}}
+\section{Musical Effects}\label{musical-effects}
 
 Musical effects are transformations which can be applied to an audio
 track to change the sound in some way. These can take the form of simple
@@ -40,8 +38,7 @@ maintaining and replacing equipment rises. As such, it is essential that
 software modelling catches up to the performance and quality of these
 older technologies.
 
-\hypertarget{musical-effect-modelling}{%
-\section{Musical Effect Modelling}\label{musical-effect-modelling}}
+\section{Musical Effect Modelling}\label{musical-effect-modelling}
 
 The main standard for producing digital effects for use with audio is
 through the Virtual Studio Technology (VST) protocol. This protocol
@@ -61,8 +58,7 @@ music industry and is the reason many professionals and hobbyists claim
 that they are inadequate for anything more than practice and
 experimentation.
 
-\hypertarget{machine-learning}{%
-\section{Machine Learning}\label{machine-learning}}
+\section{Machine Learning}\label{machine-learning}
 
 In recent years, a huge amount of research has gone into machine
 learning. Its application frequently makes news for revolutionising the
@@ -82,11 +78,9 @@ a VST effect to that clean track. We would then create a neural network
 which would take samples from the clean signal and be trained to produce
 the value of the corresponding sample in the processed track.
 
-\hypertarget{background}{%
-\chapter{Background}\label{background}}
+\chapter{Background}\label{background}
 
-\hypertarget{nebula-vst}{%
-\section{Nebula VST}\label{nebula-vst}}
+\section{Nebula VST}\label{nebula-vst}
 
 Nebula yields the best results current modelling technologies can
 achieve. It achieves this using Volterra Kernel Modelling to better
@@ -103,8 +97,7 @@ Given that Nebula is the best plugin available at this time, for this
 project to be considered a success, it should be as good as or better
 than Nebula.
 
-\hypertarget{project-magenta}{%
-\section{Project Magenta}\label{project-magenta}}
+\section{Project Magenta}\label{project-magenta}
 
 Project Magenta is a venture by the Google Brain Team, their goal is to
 explore the use of machine learning in creating art, with a particular
@@ -119,8 +112,7 @@ rather than with raw audio samples, perhaps limiting the complexity of
 the problem, making it an unfair comparison in terms of complexity to
 effect modelling.
 
-\hypertarget{wavenet}{%
-\section{WaveNet}\label{wavenet}}
+\section{WaveNet}\label{wavenet}
 
 Another use of deep learning for audio synthesis is in the field of
 generating realistic text-to-speech. DeepMind's WaveNet is a generative
@@ -152,11 +144,9 @@ This network has proven itself to be capable of generating extremely
 effective, almost human sounding text-to-speech and is far easier to
 train than a standard LSTM-based approach.
 
-\hypertarget{aims}{%
-\chapter{Aims}\label{aims}}
+\chapter{Aims}\label{aims}
 
-\hypertarget{effect-choices}{%
-\section{Effect Choices}\label{effect-choices}}
+\section{Effect Choices}\label{effect-choices}
 
 The aim of this project is to explore the viability and success of deep
 learning in effect modelling at a fairly general level. As such, a
@@ -183,8 +173,7 @@ Narrowing the scope of the project to include only these effects results
 in a good indication of viability across a multitude of effects, while
 keeping the project scope at an attainable level.
 
-\hypertarget{deep-learning}{%
-\section{Deep Learning}\label{deep-learning}}
+\section{Deep Learning}\label{deep-learning}
 
 Deep learning has demonstrated extreme potential in the realm of
 text-to-speech and audio generation. As such, it is possible that it
@@ -209,14 +198,11 @@ In order to try and work around this, LSTM networks would be explored as
 a potential remedy. These would be able to learn which aspects of the
 track need to be remembered to best replicate the effect.
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\chapter{Methods}\label{methods}
 
-\hypertarget{network-architecture}{%
-\section{Network Architecture}\label{network-architecture}}
+\section{Network Architecture}\label{network-architecture}
 
-\hypertarget{convolutional-networks}{%
-\subsection{Convolutional Networks}\label{convolutional-networks}}
+\subsection{Convolutional Networks}\label{convolutional-networks}
 
 Apart from WaveNet, guidance for creating a network architecture
 suitable for capturing the complexities of audio data were hard to come
@@ -235,13 +221,12 @@ layers. A simplified diagram of this is shown in Figure \ref{fig:nn}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth,height=6in]{images/cnn.png}
+\includegraphics[height=6.00000in]{images/cnn.png}
 \caption{A Simplified Diagram of the Convolutional Network
 used\label{fig:nn}}
 \end{figure}
 
-\hypertarget{long-short-term-networks}{%
-\subsection{Long-Short Term Networks}\label{long-short-term-networks}}
+\subsection{Long-Short Term Networks}\label{long-short-term-networks}
 
 It was thought that while a convolutional network would be impractical
 in learning the spatial elements required to reproduce a time-based
@@ -254,19 +239,16 @@ The downside to this was that training time is much slower as the
 network has a great deal more properties to learn than a typical
 feed-forward network.
 
-\hypertarget{wavenet-1}{%
-\subsection{WaveNet}\label{wavenet-1}}
+\subsection{WaveNet}\label{wavenet-1}
 
 Another idea was to implement the same basic network as WaveNet. Using
 dilated casual convolutions to classify the predicted value based on a
 one-hot encoded vector. This worked extremely well for generating speech
 data, exhibiting a ``subjective naturalness never before seen.''
 
-\hypertarget{evaluating-success}{%
-\section{Evaluating Success}\label{evaluating-success}}
+\section{Evaluating Success}\label{evaluating-success}
 
-\hypertarget{melspectograms}{%
-\subsection{Melspectograms}\label{melspectograms}}
+\subsection{Melspectograms}\label{melspectograms}
 
 Spectograms are a graphical representation of an audio signal. They show
 detailed information about the frequencies present in a signal over
@@ -285,8 +267,7 @@ This is a vital tool in determining how effectively frequency based
 effects are being modelled as it shows any changes to the EQ of the
 track.
 
-\hypertarget{impulse-response}{%
-\subsection{Impulse Response}\label{impulse-response}}
+\subsection{Impulse Response}\label{impulse-response}
 
 Impulse responses are used to represent distinct audible events. They
 can be visualised by simple graphing the amplitudes over time of a
@@ -299,8 +280,7 @@ the network is modelling distortion and other amplitude based effects.
 
 Figure \ref{fig:impulse} shows an example of an impulse response graph.
 
-\hypertarget{abx-testing}{%
-\subsection{ABX Testing}\label{abx-testing}}
+\subsection{ABX Testing}\label{abx-testing}
 
 ABX testing takes the form of having 3 tracks, A which is our clean
 signal, B which is our processed effect, and X which is the output of
@@ -314,22 +294,20 @@ than the clean input.
 
 \begin{figure}
 \centering
-\includegraphics[width=6in,height=2.4in]{images/spect.png}
+\includegraphics[width=6.00000in,height=2.40000in]{images/spect.png}
 \caption{A Melspectogram of a guitar recording\label{fig:spectogram}}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=6in,height=4.5in]{images/impulse.png}
+\includegraphics[width=6.00000in,height=4.50000in]{images/impulse.png}
 \caption{An Impulse Response Graph of 300 samples in a
 track\label{fig:impulse}}
 \end{figure}
 
-\hypertarget{implementation}{%
-\chapter{Implementation}\label{implementation}}
+\chapter{Implementation}\label{implementation}
 
-\hypertarget{generating-test-data}{%
-\section{Generating Test Data}\label{generating-test-data}}
+\section{Generating Test Data}\label{generating-test-data}
 
 In any deep learning scenario, one of the most important factors in
 success is in having a large and varied dataset for training. As such,
@@ -341,8 +319,7 @@ parameters which could be randomised was limited. In case this resulted
 in overfitting, it was also decided to supplement the randomised data
 with real music.
 
-\hypertarget{random-audio-signals}{%
-\subsection{Random Audio Signals}\label{random-audio-signals}}
+\subsection{Random Audio Signals}\label{random-audio-signals}
 
 The random audio data was generated using the \texttt{scipy.signal}
 module. The function \texttt{chirp} was used to generate an audio signal
@@ -379,8 +356,7 @@ Generating the audio was carried out in a Python script called
 how many audio tracks are to be generated and the second determines the
 number of segments per track.
 
-\hypertarget{applying-vsts-to-tracks}{%
-\subsection{Applying VSTs to Tracks}\label{applying-vsts-to-tracks}}
+\subsection{Applying VSTs to Tracks}\label{applying-vsts-to-tracks}
 
 To train the network, we need a clean signal which takes the form of the
 output from \texttt{generate.py}, we then also need files which
@@ -413,9 +389,8 @@ called `dataset' The script would then run Reapers batch mode on the
 files putting the resulting files in `dataset/processed' with the same
 file name as their corresponding source files.
 
-\hypertarget{supplementing-dataset-with-real-music}{%
 \subsection{Supplementing Dataset with Real
-Music}\label{supplementing-dataset-with-real-music}}
+Music}\label{supplementing-dataset-with-real-music}
 
 The script was later adapted to incorporate any audio files placed in
 the `training\_audio' folder into this process. Allowing users to easily
@@ -423,8 +398,7 @@ supplement the random training data with real music. This could
 potentially solve issues with overfitting and make it easier for the
 network to learn more subtle effect features.
 
-\hypertarget{deep-learning-framework}{%
-\section{Deep Learning Framework}\label{deep-learning-framework}}
+\section{Deep Learning Framework}\label{deep-learning-framework}
 
 After considering the various options for machine learning in Python,
 the framework of choice was PyTorch. PyTorch facilitates a tight
@@ -469,11 +443,9 @@ PyTorch has three main modules which were used in this project:
   backward propagation for Deep Learning to be carried out.
 \end{itemize}
 
-\hypertarget{visualisation}{%
-\section{Visualisation}\label{visualisation}}
+\section{Visualisation}\label{visualisation}
 
-\hypertarget{melspectogram}{%
-\subsection{Melspectogram}\label{melspectogram}}
+\subsection{Melspectogram}\label{melspectogram}
 
 This was achieved using MatPlotLib and LibRosa. LibRosa has a range of
 functions for visualising audio data, including the function
@@ -483,8 +455,7 @@ module. This generates a Numpy array.The \texttt{specshow} method in
 \texttt{mathplotlib.pyplot} and generates the spectogram when given the
 numpy array generated by \texttt{melspectogram}
 
-\hypertarget{signal-impulse-response}{%
-\subsection{Signal Impulse Response}\label{signal-impulse-response}}
+\subsection{Signal Impulse Response}\label{signal-impulse-response}
 
 Impulse response graphs are relatively simple to implement from the data
 we get from \texttt{librosa.core.load} which is used to read in audio
@@ -494,8 +465,7 @@ be plotted in a line using \texttt{matplotlib.pyplot}.
 We can better compare the three audio files by plotting them the three
 of them on the same axis.
 
-\hypertarget{audio-io}{%
-\section{Audio I/O}\label{audio-io}}
+\section{Audio I/O}\label{audio-io}
 
 The project utilises LibRosa for reading and writing \texttt{wav} files.
 This was chosen as it supports a multitude of different output formats.
@@ -509,8 +479,7 @@ much more robust and can even read \texttt{MP3}, for example if users
 want to include their own audio into the training data without having to
 convert it to \texttt{wav}.
 
-\hypertarget{results}{%
-\chapter{Results}\label{results}}
+\chapter{Results}\label{results}
 
 \begin{itemize}
 \tightlist
@@ -527,9 +496,7 @@ convert it to \texttt{wav}.
   ABX tests with classmates/friends (Qualitative)
 \end{itemize}
 
-\hypertarget{conclusion}{%
-\chapter{Conclusion}\label{conclusion}}
+\chapter{Conclusion}\label{conclusion}
 
-\hypertarget{references}{%
-\chapter{References}\label{references}}
+\chapter{References}\label{references}
 \end{document}

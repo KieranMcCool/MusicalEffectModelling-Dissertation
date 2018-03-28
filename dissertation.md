@@ -291,11 +291,6 @@ Figures @fig:pitchc, @fig:pitchv, and @fig:pitchm seem to confirm that some of t
 
 ### Chorus
 
-- Split into quantitative and qualitative
-- Signal Analysis (Quantitative)
-- Spectogram GIFs (Quantitative)
-- Loss over time / Standard Deviation of loss ( ??? - Loss hasn't really proven to be particularly meaningful)
-- ABX tests with classmates/friends (Qualitative)
 
 # Conclusion
 
@@ -305,7 +300,7 @@ While the characteristics are modelled with limited success, the tracks generate
 
 ## Frequency Based Effects
 
-##
+The network is able to learn some of the transformations to the EQ profile of the track but the output is unconvincing at best. The audio clips and there are clear artifacts in the signal which ruin what little success is reached in this domain. Perhaps a more sophisticated network would have better success in this domain, however the architecture of which has so far been undiscovered.
 
 ## Time Based Effects
 

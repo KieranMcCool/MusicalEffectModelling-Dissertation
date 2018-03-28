@@ -21,9 +21,9 @@
 \section{Musical Effects}\label{musical-effects}
 
 Musical effects are transformations which can be applied to an audio
-track to change the sound in some way. These can take the form of simple
-tweaks to the frequency range of the track to applying pitch modulation
-and beyond.
+track to change the sound in some way (Wenttola and others 2017). These
+can take the form of simple tweaks to the frequency range of the track
+to applying pitch modulation and beyond.
 
 Musical effects can completely change the way a track sounds and the art
 of mixing a track is - in many ways - more complicated than the
@@ -33,11 +33,11 @@ soundscape correct for the final product.
 
 The music industry is one of the few domains which is still to fully
 embrace digital technology. Many recording studios and musicians still
-make use of analogue equipment such as tape, vinyl, and vacuum tubes. As
-these technologies become more outdated and niche, the cost of
-maintaining and replacing equipment rises. As such, it is essential that
-software modelling catches up to the performance and quality of these
-older technologies.
+make use of analogue equipment such as tape, vinyl, and vacuum tubes
+(Wenttola and others 2017). As these technologies become more outdated
+and niche, the cost of maintaining and replacing equipment rises. As
+such, it is essential that software modelling catches up to the
+performance and quality of these older technologies.
 
 \section{Musical Effect Modelling}\label{musical-effect-modelling}
 
@@ -138,7 +138,7 @@ is a one-hot encoded vector where the largest index corresponds with the
 
     $F(x) = sgn(x)\frac{ln(1+\mu|x|)}{ln(1+\mu)} -1 <= x <= 1$
 
-    $\mu$ Law as expressed in \LARGE{SOURCE THIS}
+    $\mu$ Law as expressed in Cisco, 2006 
 \end{center}
 
 This network has proven itself to be capable of generating extremely
@@ -246,6 +246,12 @@ Another idea was to implement the same basic network as WaveNet. Using
 dilated casual convolutions to classify the predicted value based on a
 one-hot encoded vector. This worked extremely well for generating speech
 data, exhibiting a ``subjective naturalness never before seen.''
+
+An implementation of WaveNet was used in this project but proved
+impractical as One-Hot Encoding/Decoding of 24 bit audio is slow due to
+the linear time of decoding. While this worked fine for 8 bit speech
+data, such a sample depth proved too low to represent audio of a musical
+nature with enough accuracy to be considered successful.
 
 \section{Evaluating Success}\label{evaluating-success}
 
@@ -785,5 +791,11 @@ project failed.
 Results are therefore a proof of concept rather than a final verdict on
 the viability of this technique in modelling.
 
-\chapter{References}\label{references}
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\hypertarget{refs}{}
+\hypertarget{ref-wenttola2017use}{}
+Wenttola, Viljami, and others. 2017. ``The Use of Modelling Technology
+and Its Effects on the Music Industry.'' Tampereen ammattikorkeakoulu.
 \end{document}

@@ -2,11 +2,11 @@
 
 ## Musical Effects
 
-Musical effects are transformations which can be applied to an audio track to change the sound in some way. These can take the form of simple tweaks to the frequency range of the track to applying pitch modulation and beyond. 
+Musical effects are transformations which can be applied to an audio track to change the sound in some way [@wenttola2017use]. These can take the form of simple tweaks to the frequency range of the track to applying pitch modulation and beyond. 
 
 Musical effects can completely change the way a track sounds and the art of mixing a track is - in many ways - more complicated than the composition and performance of the track. Sound engineers have a huge range of choices and responsibility when it comes to getting the soundscape correct for the final product.
 
-The music industry is one of the few domains which is still to fully embrace digital technology. Many recording studios and musicians still make use of analogue equipment such as tape, vinyl, and vacuum tubes. As these technologies become more outdated and niche, the cost of maintaining and replacing equipment rises. As such, it is essential that software modelling catches up to the performance and quality of these older technologies.
+The music industry is one of the few domains which is still to fully embrace digital technology. Many recording studios and musicians still make use of analogue equipment such as tape, vinyl, and vacuum tubes [@wenttola2017use]. As these technologies become more outdated and niche, the cost of maintaining and replacing equipment rises. As such, it is essential that software modelling catches up to the performance and quality of these older technologies.
 
 ## Musical Effect Modelling
 
@@ -54,7 +54,7 @@ Another way in which the WaveNet implementation differs from a standard convolut
 
     $F(x) = sgn(x)\frac{ln(1+\mu|x|)}{ln(1+\mu)} -1 <= x <= 1$
 
-    $\mu$ Law as expressed in \LARGE{SOURCE THIS}
+    $\mu$ Law as expressed in Cisco, 2006 
 \end{center}
 
 This network has proven itself to be capable of generating extremely effective, almost human sounding text-to-speech and is far easier to train than a standard LSTM-based approach.
@@ -115,6 +115,8 @@ The downside to this was that training time is much slower as the network has a 
 ### WaveNet 
 
 Another idea was to implement the same basic network as WaveNet. Using dilated casual convolutions to classify the predicted value based on a one-hot encoded vector. This worked extremely well for generating speech data, exhibiting a "subjective naturalness never before seen."
+
+An implementation of WaveNet was used in this project but proved impractical as One-Hot Encoding/Decoding of 24 bit audio is slow due to the linear time of decoding. While this worked fine for 8 bit speech data, such a sample depth proved too low to represent audio of a musical nature with enough accuracy to be considered successful.
 
 ## Evaluating Success
 

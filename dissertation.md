@@ -232,13 +232,15 @@ For a model to be considered successful, the Spectogram and Impulse responses sh
 
 This model was created using a Convolutional Network consisting of 6 convolutional layers, which have a ReLU activation layer between them, before a Max Pooling Layer and a Fully Connected section which consists of 3 Linear layers.
 
+As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distortions:v, the distortion unit adds a huge amount to the intensity of all frequencies, with a bias toward the mid ranges. This behaviour is captured fairly well by the model. Figure @fig:distortion also demonstrates that the amplitude boost is also learned by the model.
+
 ![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
-![Clean Spectogram](images/distclean.png){#fig:distortion width=6in}
+![Clean Spectogram](images/distclean.png){#fig:distortionsc width=6in}
 
-![Model Spectogram](images/distmodel.png){#fig:distortion width=6in}
+![Model Spectogram](images/distmodel.png){#fig:distortionsm width=6in}
 
-![VST Spectogram](images/distvstspect.png){#fig:distortion width=6in}
+![VST Spectogram](images/distvstspect.png){#fig:distortionsv width=6in}
 
 ![Distortion Impulse Response after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 

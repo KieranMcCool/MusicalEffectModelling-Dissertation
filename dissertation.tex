@@ -517,6 +517,13 @@ convolutional layers, which have a ReLU activation layer between them,
 before a Max Pooling Layer and a Fully Connected section which consists
 of 3 Linear layers.
 
+As demonstrated in the figures \ref{fig:distortionsc},
+\ref{fig:distortionsm}, and ({\textbf{???}}), the distortion unit adds a
+huge amount to the intensity of all frequencies, with a bias toward the
+mid ranges. This behaviour is captured fairly well by the model. Figure
+\ref{fig:distortion} also demonstrates that the amplitude boost is also
+learned by the model.
+
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in,height=4.50000in]{images/distortion.png}
@@ -527,19 +534,19 @@ dataset\label{fig:distortion}}
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in]{images/distclean.png}
-\caption{Clean Spectogram\label{fig:distortion}}
+\caption{Clean Spectogram\label{fig:distortionsc}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in]{images/distmodel.png}
-\caption{Model Spectogram\label{fig:distortion}}
+\caption{Model Spectogram\label{fig:distortionsm}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in]{images/distvstspect.png}
-\caption{VST Spectogram\label{fig:distortion}}
+\caption{VST Spectogram\label{fig:distortionsv}}
 \end{figure}
 
 \begin{figure}

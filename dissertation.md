@@ -236,11 +236,11 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @fig:di
 
 ![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
-![Clean Spectogram](images/distclean.png){#fig:distortionsc width=4in}
+![Clean Spectogram (Distorion)](images/distclean.png){#fig:distortionsc width=4in}
 
-![Model Spectogram](images/distmodel.png){#fig:distortionsm width=4in}
+![Model Spectogram (Distortion)](images/distmodel.png){#fig:distortionsm width=4in}
 
-![VST Spectogram](images/distvstspect.png){#fig:distortionsv width=4in}
+![VST Spectogram (Distortion)](images/distvstspect.png){#fig:distortionsv width=4in}
 
 ### Fuzz
 
@@ -248,11 +248,11 @@ Fuzz seems to be modelled with similar success to distortion, which makes sense 
 
 ![Fuzz after 30000 iterations over the dataset](images/fuzz.png){#fig:fuzz width=6in height=4.5in}
 
-![Clean Spectogram](images/fuzzclean.png){#fig:fuzzc width=4in}
+![Clean Spectogram (Fuzz)](images/fuzzclean.png){#fig:fuzzc width=4in}
 
-![Model Spectogram](images/fuzzmodel.png){#fig:fuzzm width=4in}
+![Model Spectogram (Fuzz)](images/fuzzmodel.png){#fig:fuzzm width=4in}
 
-![VST Spectogram](images/fuzzvst.png){#fig:fuzzv width=4in}
+![VST Spectogram (Fuzz)](images/fuzzvst.png){#fig:fuzzv width=4in}
 
 ### Amplifier + Cab Simulation
 
@@ -260,11 +260,11 @@ Amp Simulation is a historically difficult task. Modelling amplifiers still have
 
 ![Amp Simulation after 30000 iterations over the dataset](images/ampsim.png){#fig:ampsim width=6in height=4.5in}
 
-![Clean Spectogram](images/ampsimclean.png){#fig:ampc width=4in} 
+![Clean Spectogram (Amp Sim)](images/ampsimclean.png){#fig:ampc width=4in} 
 
-![Model Spectogram](images/ampsimmodel.png){#fig:ampm width=4in}
+![Model Spectogram (Amp Sim)](images/ampsimmodel.png){#fig:ampm width=4in}
 
-![VST Spectogram](images/ampsimvst.png){#fig:ampv width=4in}
+![VST Spectogram (Amp Sim)](images/ampsimvst.png){#fig:ampv width=4in}
 
 
 

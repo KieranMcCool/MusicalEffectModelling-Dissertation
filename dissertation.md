@@ -173,6 +173,9 @@ Generating the audio was carried out in a Python script called `generate.py` whi
 
 To train the network, we need a clean signal which takes the form of the output from `generate.py`, we then also need files which represent that track after it has been processed by an effect. 
 
+In order to achieve this, a VST host which could be invoked through the command line was preferred. Initially a command line utility known as MrsWatson was selected for this. It could be invoked with a command such as `mrswatson --input mysong.wav --output out.wav --plugin myplugin` to apply an effect called `myplugin` to `mysong.wav`. However, 
+`
+
 ### Supplementing Dataset with real Music
 
 ## Deep Learning Framework

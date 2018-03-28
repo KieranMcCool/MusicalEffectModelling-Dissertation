@@ -386,6 +386,14 @@ To train the network, we need a clean signal which takes the form of the
 output from \texttt{generate.py}, we then also need files which
 represent that track after it has been processed by an effect.
 
+In order to achieve this, a VST host which could be invoked through the
+command line was preferred. Initially a command line utility known as
+MrsWatson was selected for this. It could be invoked with a command such
+as
+\texttt{mrswatson\ -\/-input\ mysong.wav\ -\/-output\ out.wav\ -\/-plugin\ myplugin}
+to apply an effect called \texttt{myplugin} to \texttt{mysong.wav}.
+However, `
+
 \hypertarget{supplementing-dataset-with-real-music}{%
 \subsection{Supplementing Dataset with real
 Music}\label{supplementing-dataset-with-real-music}}

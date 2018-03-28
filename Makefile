@@ -18,7 +18,6 @@ all:
 clean:
 	rm dissertation.bbl
 	rm dissertation.blg
-	rm dissertation.pdf
 	rm dissertation.log
 	rm dissertation.aux
 	rm dissertation.toc

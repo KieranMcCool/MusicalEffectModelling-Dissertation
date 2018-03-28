@@ -275,7 +275,9 @@ This is perhaps due to the fact that there are a lot more behaviours to learn in
 
 ### Pitch Shifting (Octave Shift)
 
-Pitch shifting is an interesting effect, 
+Pitch shifting is an interesting effect, the domain of the effect is solely in the EQ profile, unlike amp simulation which spans both domains. As such, it is useful in confirming whether the model is capable of learning these EQ based transformations.
+
+Figures @fig:pitchc, @fig:pitchv, and @fig:pitchm seem to confirm that some of this EQ based behaviour is captured and replicated. Listening to the track also confirms this to be true. However, as shown in @fig:pitch, the model adds a lot of additional noise to the signal, this comes across in the track as hiss and clipping. The model output is significantly louder than both the clean signal and the VST processed track.
 
 ![Octave Pitch Shift after 30000 iterations over the dataset](images/pitch.png){#fig:pitch width=6in height=4.5in}
 
@@ -286,8 +288,6 @@ Pitch shifting is an interesting effect,
 ![VST Spectogram (Pitch Shift)](images/pitchvst.png){#fig:pitchv width=4in}
 
 ## Time Based Effects
-
-### Reverb
 
 ### Chorus
 

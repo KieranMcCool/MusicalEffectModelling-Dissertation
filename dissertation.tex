@@ -472,19 +472,19 @@ PyTorch has three main modules which were used in this project:
 \hypertarget{visualisation}{%
 \section{Visualisation}\label{visualisation}}
 
-\begin{itemize}
-\tightlist
-\item
-  PyTorch
-\item
-  SciPy.signal
-\item
-  LibRosa
-\item
-  Reaper and the VSTs used
-\item
-  How the pieces fit together
-\end{itemize}
+\#\#~Audio I/O
+
+The project utilises LibRosa for reading and writing \texttt{wav} files.
+This was chosen as it supports a multitude of different output formats.
+Early versions of the project were using \texttt{SciPy.IO.wavfile} for
+this but it was limited to 64 bit output files, which was unnecessarily
+large for audio data and required too much storage space.
+
+LibRosa will output the file with the smallest sample depth required to
+adequately represent the track, creating much smaller files. It is also
+much more robust and can even read \texttt{MP3}, for example if users
+want to include their own audio into the training data without having to
+convert it to \texttt{wav}.
 
 \hypertarget{results}{%
 \chapter{Results}\label{results}}

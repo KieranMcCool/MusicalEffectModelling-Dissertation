@@ -193,7 +193,12 @@ This allows for easy debugging as the Python debugger and simple `print` stateme
 
 Beyond this, PyTorch has a very 'Python-first' philosophy, allowing Tensors to be manipulated using standard Python list slicing, it's even possible to perform list comprehensions on them.
 
-PyTorch has three main modules which were used in this project; the base module `torch`, which provides access to the `torch.Tensor` and its various subclasses; `torch.nn` which provides the necessary implementations of neural network layers, as well as `nn.Sequential`, which can be used to stack various into one class for ease of use and to eliminate the boilerplate code which often is required of other frameworks; and finally `torch.Autograd` which provides the `Variable` class, this encapsulates a `Tensor` and allows it to be used with backward propagation for Deep Learning to be carried out.
+PyTorch has three main modules which were used in this project:
+
+* The base module `torch`, which provides access to the `torch.Tensor` and its various subclasses.
+* `torch.nn` which provides the necessary implementations of neural network layers. 
+    - Also provides `nn.Sequential`, which can be used to stack various layers into one class for ease of use and to eliminate the boilerplate code which often is required of other frameworks. 
+* `torch.Autograd` which provides the `Variable` class, this encapsulates a `Tensor` and allows it to be used with backward propagation for Deep Learning to be carried out.
 
 ## Visualisation
 

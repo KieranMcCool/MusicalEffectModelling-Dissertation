@@ -297,6 +297,8 @@ In order to combat this, an LSTM network was used instead. This took the form of
 
 Despite this, the LSTM failed to characterise the behaviour of the VST and in fact did not produce an audible track at all, even after 2 hours of training. The time to train these networks is slow and even with different numbers of layers and hidden sizes the results were the same.
 
+From figure @fig:chorus, we can see that while there is a variation to the signal in both the Clean and VST output, the LSTM seems to be outputting either very similar or the same value for each sample. It is unclear what would cause such a behaviour. This results in no audible signal being present in the file.
+
 ![Chorus after 30000 iterations over the dataset](images/chorus.png){#fig:chorus width=6in height=4.5in}
 
 ![Clean Spectogram (Chorus)](images/chorusclean.png){#fig:chorusc width=4in} 

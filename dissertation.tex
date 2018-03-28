@@ -696,6 +696,12 @@ and in fact did not produce an audible track at all, even after 2 hours
 of training. The time to train these networks is slow and even with
 different numbers of layers and hidden sizes the results were the same.
 
+From figure \ref{fig:chorus}, we can see that while there is a variation
+to the signal in both the Clean and VST output, the LSTM seems to be
+outputting either very similar or the same value for each sample. It is
+unclear what would cause such a behaviour. This results in no audible
+signal being present in the file.
+
 \begin{figure}
 \centering
 \includegraphics[width=6.00000in,height=4.50000in]{images/chorus.png}

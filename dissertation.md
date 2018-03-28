@@ -210,7 +210,7 @@ This was achieved using MatPlotLib and LibRosa. LibRosa has a range of functions
 
 Impulse response graphs are relatively simple to implement from the data we get from `librosa.core.load` which is used to read in audio files. The result is an array of amplitudes over time which can simply be plotted in a line using `matplotlib.pyplot`. 
 
-We can better compare the three audio files by plotting them the three of them on the same axis as is shown in @fig:axisshare
+We can better compare the three audio files by plotting them the three of them on the same axis as is shown in figure @fig:axisshare
 
 ![Demonstrates the Clean Signal (Red), the VST Signal (Blue), and the Model Signal (Green)](images/axisshare.png){#fig:axisshare width=6in height=4.5in}
 

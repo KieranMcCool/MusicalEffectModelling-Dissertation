@@ -208,6 +208,10 @@ This was achieved using MatPlotLib and LibRosa. LibRosa has a range of functions
 
 ### Signal Impulse Response
 
+Impulse response graphs are relatively simple to implement from the data we get from `librosa.core.load` which is used to read in audio files. The result is an array of amplitudes over time which can simply be plotted in a line using `matplotlib.pyplot`. 
+
+We can better compare the three audio files by plotting them the three of them on the same axis.
+
 ## Audio I/O
 
 The project utilises LibRosa for reading and writing `wav` files. This was chosen as it supports a multitude of different output formats. Early versions of the project were using `SciPy.IO.wavfile` for this but it was limited to 64 bit output files, which was unnecessarily large for audio data and required too much storage space. 

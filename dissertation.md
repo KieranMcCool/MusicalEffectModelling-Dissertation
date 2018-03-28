@@ -327,5 +327,10 @@ The LSTM Network failed to produce audio which exhibited the qualities of Chorus
 
 Perhaps the WaveNet solution would have had more success with this, however the implementation of it proved impractical for audio data. Given that one-hot decoding is in linear time based on the sample depth of the audio track. This works fine for speech data which is typically 8 bit but for musical data, we require a sample depth of 24 or greater to express the required complexity. As such, this process of one-hot decoding adds an inordinate amount of training time to the point where the network failed to train anything meaningful despite being left overnight.
 
+## Final Thoughts
+
+This project shows potential for deep learning to be used in musical effect modelling. Despite not reaching a production ready solution, with the number of hyperparameters and different network architectures available, there must exist a network which will succeed where this project failed. 
+
+Results are therefore a proof of concept rather than a final verdict on the viability of this technique in modelling.
 
 # References

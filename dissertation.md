@@ -224,9 +224,15 @@ LibRosa will output the file with the smallest sample depth required to adequate
 
 # Results
 
+For a model to be considered successful, the Spectogram and Impulse responses should look more similar to the VST output than the clean signal.
+
 ## Amplitude Based Effects
 
 ### Distortion
+
+This model was created using a Convolutional Network consisting of 6 convolutional layers, which have a ReLU activation layer between them, before a Max Pooling Layer and a Fully Connected section which consists of 3 Linear layers.
+
+![Distortion Impulse Response after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
 ### Fuzz
 
@@ -253,5 +259,16 @@ LibRosa will output the file with the smallest sample depth required to adequate
 - ABX tests with classmates/friends (Qualitative)
 
 # Conclusion
+
+## Amplitude Based Effects
+
+## Frequency Based Effects
+
+## Time Based Effects
+
+The LSTM Network failed to produce audio which exhibited the qualities of Chorus, Reverb, or Delay.This is perhaps due to the simple fact that with audio being sampled at 44,100 samples per second, and the active window of these effects potentially spanning more than 0.5 seconds, that the network is simply unable to train itself on what to remember.
+
+Perhaps the WaveNet solution would have had more success with this
+
 
 # References

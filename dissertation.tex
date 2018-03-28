@@ -504,9 +504,25 @@ convert it to \texttt{wav}.
 
 \chapter{Results}\label{results}
 
+For a model to be considered successful, the Spectogram and Impulse
+responses should look more similar to the VST output than the clean
+signal.
+
 \section{Amplitude Based Effects}\label{amplitude-based-effects}
 
 \subsection{Distortion}\label{distortion}
+
+This model was created using a Convolutional Network consisting of 6
+convolutional layers, which have a ReLU activation layer between them,
+before a Max Pooling Layer and a Fully Connected section which consists
+of 3 Linear layers.
+
+\begin{figure}
+\centering
+\includegraphics[width=6.00000in,height=4.50000in]{images/distortion.png}
+\caption{Distortion Impulse Response after 30000 iterations over the
+dataset\label{fig:distortion}}
+\end{figure}
 
 \subsection{Fuzz}\label{fuzz}
 
@@ -541,6 +557,20 @@ Shift)}\label{pitch-shifting-octave-shift}
 \end{itemize}
 
 \chapter{Conclusion}\label{conclusion}
+
+\section{Amplitude Based Effects}\label{amplitude-based-effects-1}
+
+\section{Frequency Based Effects}\label{frequency-based-effects-1}
+
+\section{Time Based Effects}\label{time-based-effects-1}
+
+The LSTM Network failed to produce audio which exhibited the qualities
+of Chorus, Reverb, or Delay.This is perhaps due to the simple fact that
+with audio being sampled at 44,100 samples per second, and the active
+window of these effects potentially spanning more than 0.5 seconds, that
+the network is simply unable to train itself on what to remember.
+
+Perhaps the WaveNet solution would have had more success with this
 
 \chapter{References}\label{references}
 \end{document}

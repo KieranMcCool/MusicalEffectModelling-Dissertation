@@ -236,15 +236,14 @@ As demonstrated in the figures @fig:distortionsc, @fig:distortionsm, and @distor
 
 ![Distortion after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
 
-![Clean Spectogram](images/distclean.png){#fig:distortionsc width=6in}
+![Clean Spectogram](images/distclean.png){#fig:distortionsc width=4in}
 
-![Model Spectogram](images/distmodel.png){#fig:distortionsm width=6in}
+![Model Spectogram](images/distmodel.png){#fig:distortionsm width=4in}
 
-![VST Spectogram](images/distvstspect.png){#fig:distortionsv width=6in}
-
-![Distortion Impulse Response after 30000 iterations over the dataset](images/distortion.png){#fig:distortion width=6in height=4.5in}
+![VST Spectogram](images/distvstspect.png){#fig:distortionsv width=4in}
 
 ### Fuzz
+
 
 ### Amplifier + Cab Simulation
 

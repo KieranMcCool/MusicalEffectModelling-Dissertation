@@ -151,7 +151,13 @@ For our project to be considered successful, the results would show extreme bias
 
 ## Generating Test Data
 
+In any deep learning scenario, one of the most important factors in success is in having a large and varied dataset for training. As such, for this project, it was decided that we would generate random audio data as needed, giving a theoretically infinite amount of training data. 
+
+While random data ensures a significantly large dataset, the number of parameters which could be randomised was limited. In case this resulted in overfitting, it was also decided to supplement the randomised data with real music. 
+
 ### Random Audio Signals
+
+The random audio data was generated using the `scipy.signal` module. 
 
 ### Applying VSTs to Tracks
 
